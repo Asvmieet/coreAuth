@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <div class="content">
+    <div class="titletext">
+    <h1>Team Verdale Authentication</h1>
+    <br></br>
+    </div>
+    <h3 id="referance">Referance ID: XYZ</h3>
+    <h3 id="authText">Checking...</h3>
+
+</br>
+
+</div>
+</html>
+
+<script>
+
+
+    window.onload = function(){
+        const docID = new URLSearchParams(window.location.search)
+
+        const refID = docID.get("authKey")
+        document.getElementById("referance").innerText = `Referance ID: ${refID}`
+
+        if (refID.split("")[0].toLowerCase() == "t" && refID.split("")[2].toLowerCase() == "v" && refID.split("")[5].toLowerCase() == "c"){
+
+            document.getElementById("referance").innerText = `Referance ID: ${refID}`
+            document.getElementById("authText").innerText = "This is an offical communication by Team Verdale."
+
+    } else {
+        document.getElementById("referance").innerText = `Referance ID: ${refID}`
+        document.getElementById("authText").innerText = "This is NOT an offical communication by Team Verdale"
+    }
+
+}
+
+</script>
