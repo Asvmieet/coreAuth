@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./vue.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <div class="content">
+    <div class="titletext">
+    <h1>Team Verdale FileVue</h1>
+    </div>
+    <h3 class="info">Please enter the Document ID to retrieve your file.</h3>
+ 
+    <input placeholder="Document ID" id="docID"></input>
+</br>
+
+    <button onclick="openFile()">View File</button>
+
+</br>
+
+<h3 class="power" >Powered by CoreAuth</h3>
+</div>
+</html>
+
+<script>
+
+async function getFiles(){
+
+    const files = await fetch("./files.json").then(response => response.json())
+
+    const updatedFiles = files.map(file => {
+        let url = file.path;
+
+        if (!url.startsWith("http")){
+            url = url.replace("./", "/");
+        }
+
+        return{
+            id: file.id,
+            path: url
+
+        }
+
+
+    })
+
+    return updatedFiles
+
+}
+
+async function openFile(){
+
+    const files = await getFiles()
+
+
+        const requestedFile = files.find(file => file.id === document.getElementById("docID").value.trim())
+        if (requestedFile){
+                  window.location.href = requestedFile.path;
+        }else{
+            alert("fileVue: Unable to locate file.")
+        }
+                
+            
+    
+
+
+}
+
+
+
+
+</script>

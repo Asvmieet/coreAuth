@@ -1,0 +1,60 @@
+body{
+
+
+}
+
+
+.gridItem{
+    width: 238px;
+    height: 208px;
+    background-color: #6B917E;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.fileInfo{
+    background-color: #354F52;
+    width: 238px;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-top: 0;
+    padding-top: 5px;
+    align-items: flex-start;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+}
+
+.imgGRD{
+    border-radius: 15px;
+    object-fit: cover !important;
+    border: none;
+    border-color: transparent;
+    width: 100% !important;
+    height: 155 !important;
+}
+
+.top{
+    margin-bottom: 0px ;
+    padding-bottom: 0px;
+}
+
+.bottom{
+    margin-top: 0px ;
+    padding-top: 0px;
+}
+
+h4,h5{
+    padding-left: 15px;
+    font-family: "Montserrat";
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    align-self: center;
+    justify-content: center;
+}

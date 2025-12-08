@@ -1,0 +1,23 @@
+[
+    {
+        "path": "files/localFiles/LEGAL_VFCT_E1.png",
+        "id": "LEGAL_VFCT_E1"
+        },
+
+    {
+        "path": "files/localFiles/del1.png",
+        "id": "OPS_del1"
+
+    },
+    {
+        "path": "files/localFiles/del2.pdf",
+        "id": "OPS_del2"
+
+    },
+    {
+        "path": "files/localFiles/modelPhotos",
+        "id": "PDEV_modelPhotos"
+
+    }
+
+]
